@@ -10,6 +10,7 @@ function getBooksBorrowedCount(books) {
   return books.filter((book) => !book.borrows[0].returned).length;
 }
 
+//Helper function for sort and splice for the next 3 functions
 function sortAndSplice(array) {
   return array
     .sort((elementA, elementB) => elementB.count - elementA.count)
